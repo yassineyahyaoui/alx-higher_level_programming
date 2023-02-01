@@ -1,0 +1,56 @@
+============================
+``5-text_indentation`` module
+============================
+
+``text_indentation()`` Print a square depends on the number typed.
+
+::
+
+Importing function from the module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now Use it
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    >>> text = "a, b. c: d? e"
+    >>> text_indentation(text)
+    a, b.
+    <BLANKLINE>
+    c:
+    <BLANKLINE>
+    d?
+    <BLANKLINE>
+    e
+    >>> text = "a, b. c: d? e."
+    >>> text_indentation(text)
+    a, b.
+    <BLANKLINE>
+    c:
+    <BLANKLINE>
+    d?
+    <BLANKLINE>
+    e.
+    <BLANKLINE>
+    >>> text = ".:?."
+    >>> text_indentation(text)
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    >>> text_indentation("Hello World!")
+    Hello World!
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
